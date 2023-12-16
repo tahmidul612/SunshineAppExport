@@ -83,7 +83,7 @@ function SunshineExport {
     $reader = [System.Xml.XmlNodeReader]::new($xaml)
     $window.Content = [Windows.Markup.XamlReader]::Load($reader)
 
-    $appsPath = "$Env:ProgramW6432\Sunshine\config\apps.json"
+    $appsPath = "$Env:USERPROFILE\scoop\sunshine\current\config\apps.json"
 
     $inputField = $window.Content.FindName("SunshinePath")
     $inputField.Text = $appsPath   
